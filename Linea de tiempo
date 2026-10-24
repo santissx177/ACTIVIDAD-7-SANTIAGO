@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo de la Criptografía</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b1120;
+            color: #e5e7eb;
+        }
+
+        header {
+            text-align: center;
+            padding: 45px 20px;
+            background: linear-gradient(135deg, #172554, #312e81);
+        }
+
+        header h1 {
+            color: #67e8f9;
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+            padding: 35px 20px;
+        }
+
+        .introduccion {
+            background: #172033;
+            padding: 20px;
+            border-radius: 12px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 20px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #22d3ee;
+        }
+
+        .evento {
+            position: relative;
+            margin: 0 0 28px 50px;
+            padding: 22px;
+            background: #172033;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .evento:hover {
+            transform: translateX(5px);
+            border-color: #22d3ee;
+        }
+
+        .evento::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 25px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #22d3ee;
+            border: 3px solid #0b1120;
+        }
+
+        .fecha {
+            color: #67e8f9;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .evento h2 {
+            margin: 10px 0;
+            color: #f8fafc;
+            font-size: 1.25rem;
+        }
+
+        .evento p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+
+        .etiqueta {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 5px 10px;
+            border-radius: 20px;
+            background: #164e63;
+            color: #a5f3fc;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+            border-top: 1px solid #334155;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.7rem;
+            }
+
+            main {
+                padding: 25px 14px;
+            }
+
+            .evento {
+                margin-left: 42px;
+                padding: 17px;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .evento::before {
+                left: -34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Historia de la Criptografía</h1>
+        <p>La evolución de las técnicas para proteger la información</p>
+    </header>
+
+    <main>
+        <section class="introduccion">
+            <h2>¿Qué es la criptografía?</h2>
+            <p>
+                La criptografía es una disciplina que utiliza técnicas
+                matemáticas para proteger la información, permitiendo que
+                solo las personas autorizadas puedan comprenderla o verificarla.
+                A lo largo de la historia ha evolucionado para responder a
+                nuevas necesidades de seguridad.
+            </p>
+        </section>
+
+        <section class="timeline">
+
+            <article class="evento">
+                <span class="fecha">Antigüedad</span>
+                <h2>Primeros métodos de cifrado</h2>
+                <p>
+                    Se utilizaron métodos sencillos para ocultar mensajes.
+                    Un ejemplo es el cifrado César, que sustituía cada letra
+                    por otra situada a cierta distancia en el alfabeto.
+                </p>
+                <span class="etiqueta">Cifrado por sustitución</span>
+            </article>
+
+            <article class="evento">
+                <span class="fecha">Siglos XV - XIX</span>
+                <h2>Desarrollo de los cifrados clásicos</h2>
+                <p>
+                    Aparecieron técnicas más elaboradas, como el cifrado
+                    de Vigenère, que empleaba una clave para cambiar
+                    las letras del mensaje.
+                </p>
+                <span class="etiqueta">Claves y alfabetos</span>
+            </article>
+
+            <article class="evento">
+                <span class="fecha">Primera mitad del siglo XX</span>
+                <h2>Máquinas de cifrado</h2>
+                <p>
+                    Se desarrollaron máquinas electromecánicas para cifrar
+                    mensajes. La máquina Enigma fue utilizada por Alemania
+                    durante la Segunda Guerra Mundial.
+                </p>
+                <span class="etiqueta">Criptografía mecánica</span>
+            </article>
+
+            <article class="evento">
+                <span class="fecha">Décadas de 1970 - 1990</span>
+                <h2>Criptografía moderna</h2>
+                <p>
+                    Surgieron estándares y algoritmos importantes.
+                    DES fue adoptado como estándar en 1977, y RSA,
+                    publicado en 1977, impulsó la criptografía de clave pública.
+                </p>
+                <span class="etiqueta">DES y RSA</span>
+            </article>
+
+            <article class="evento">
+                <span class="fecha">Décadas de 2000 - 2020</span>
+                <h2>Seguridad en Internet</h2>
+                <p>
+                    AES se convirtió en un estándar ampliamente utilizado.
+                    Protocolos como TLS ayudan a proteger las comunicaciones
+                    por Internet, y SHA-256 se utiliza en distintas aplicaciones
+                    de integridad y seguridad.
+                </p>
+                <span class="etiqueta">AES, TLS y SHA-256</span>
+            </article>
+
+            <article class="evento">
+                <span class="fecha">2024 en adelante</span>
+                <h2>Criptografía poscuántica</h2>
+                <p>
+                    En 2024, el NIST publicó sus primeros estándares
+                    principales de criptografía poscuántica, diseñados para
+                    resistir posibles ataques de futuros computadores cuánticos.
+                    Entre ellos están ML-KEM y ML-DSA.
+                </p>
+                <span class="etiqueta">Protección frente a amenazas cuánticas</span>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Proyecto educativo de seguridad informática</p>
+        <p>Línea del tiempo: Historia de la Criptografía</p>
+    </footer>
+
+</body>
+</html>
